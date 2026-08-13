@@ -1387,3 +1387,183 @@ footer {
         transform: translate(-120px, 100px);
     }
 }
+/* =========================
+   THEME TOGGLE
+========================= */
+
+.nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.theme-toggle {
+    width: 42px;
+    height: 42px;
+
+    border: 1px solid #e1e4ec;
+    border-radius: 12px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: white;
+    color: #343b4c;
+
+    font-size: 18px;
+
+    cursor: pointer;
+
+    transition: 0.25s;
+}
+
+.theme-toggle:hover {
+    transform: translateY(-2px);
+    border-color: #5367ff;
+    color: #5367ff;
+}
+/* =========================
+   DARK THEME
+========================= */
+
+body.dark-theme {
+    color: #edf0f7;
+    background: #10131c;
+}
+
+
+/* Navbar */
+
+body.dark-theme .navbar {
+    background: rgba(16, 19, 28, 0.92);
+    border-bottom-color: #252a38;
+}
+
+body.dark-theme nav a {
+    color: #aeb5c5;
+}
+
+body.dark-theme nav a:hover {
+    color: #8c9aff;
+}
+
+body.dark-theme .theme-toggle {
+    border-color: #303646;
+    background: #1b1f2b;
+    color: #f3f5ff;
+}
+
+
+/* About */
+
+body.dark-theme .about {
+    background: #10131c;
+}
+
+body.dark-theme .about-card {
+    border-color: #292e3c;
+    background: #181c27;
+}
+
+body.dark-theme .large-card {
+    background: #1c2132;
+}
+
+body.dark-theme .about-card p {
+    color: #969eaf;
+}
+
+
+/* Classes */
+
+body.dark-theme .classes {
+    background: #151923;
+}
+
+
+/* Faculty */
+
+body.dark-theme .faculty {
+    background: #10131c;
+}
+
+body.dark-theme .faculty-card {
+    border-color: #292e3c;
+    background: #181c27;
+}
+
+body.dark-theme .faculty-info p {
+    color: #969eaf;
+}
+
+
+/* Facilities */
+
+body.dark-theme .facilities {
+    background: #151923;
+}
+
+body.dark-theme .facility-item {
+    border-color: #292e3c;
+    background: #181c27;
+}
+
+body.dark-theme .facility-item p {
+    color: #969eaf;
+}
+
+
+/* Contact */
+
+body.dark-theme .contact {
+    background: #10131c;
+}
+
+body.dark-theme .contact-grid > div:first-child p {
+    color: #969eaf;
+}
+
+body.dark-theme .contact-item p {
+    color: #a6adbd;
+}
+
+body.dark-theme .contact-icon {
+    background: #20263a;
+}
+
+
+/* Footer */
+
+body.dark-theme footer {
+    background: #090b11;
+}
+
+
+/* General text */
+
+body.dark-theme .section-heading > p,
+body.dark-theme .center-heading > p {
+    color: #969eaf;
+}
+
+
+/* Smooth theme transition */
+
+body,
+.navbar,
+.about,
+.about-card,
+.classes,
+.faculty,
+.faculty-card,
+.facilities,
+.facility-item,
+.contact,
+.contact-icon,
+.theme-toggle {
+    transition:
+        background-color 0.35s ease,
+        color 0.35s ease,
+        border-color 0.35s ease;
+}
