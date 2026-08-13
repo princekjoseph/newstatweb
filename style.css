@@ -1240,3 +1240,150 @@ footer {
         gap: 8px;
     }
 }
+/* =========================
+   ANIMATIONS
+========================= */
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.hero-tag {
+    animation: fadeUp 0.8s ease forwards;
+}
+
+.hero h1 {
+    animation: fadeUp 0.9s ease 0.1s both;
+}
+
+.hero-content > p {
+    animation: fadeUp 0.9s ease 0.2s both;
+}
+
+.hero-buttons {
+    animation: fadeUp 0.9s ease 0.3s both;
+}
+
+.hero-stats {
+    animation: fadeUp 0.9s ease 0.4s both;
+}
+@keyframes backgroundZoom {
+    from {
+        background-size: 100%;
+    }
+
+    to {
+        background-size: 108%;
+    }
+}
+
+.hero {
+    animation: backgroundZoom 8s ease-out forwards;
+}
+.about-card,
+.class-card,
+.faculty-card,
+.facility-item {
+    transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease;
+}
+
+.about-card:hover,
+.faculty-card:hover,
+.facility-item:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 45px rgba(30, 40, 80, 0.12);
+}
+
+.class-card:hover {
+    transform: translateY(-10px) scale(1.02);
+}
+@keyframes floating {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-6px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.hero-stats div:nth-child(1) {
+    animation: floating 4s ease-in-out infinite;
+}
+
+.hero-stats div:nth-child(2) {
+    animation: floating 4s ease-in-out 0.5s infinite;
+}
+
+.hero-stats div:nth-child(3) {
+    animation: floating 4s ease-in-out 1s infinite;
+}
+.primary-button,
+.secondary-button,
+.white-button {
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        background 0.25s ease;
+}
+
+.primary-button:hover,
+.secondary-button:hover,
+.white-button:hover {
+    transform: translateY(-3px);
+}
+.hero::after {
+    content: "";
+
+    position: absolute;
+
+    width: 400px;
+    height: 400px;
+
+    top: -150px;
+    right: -100px;
+
+    border-radius: 50%;
+
+    background: rgba(255, 255, 255, 0.08);
+
+    filter: blur(5px);
+
+    animation: heroLight 7s ease-in-out infinite alternate;
+
+    pointer-events: none;
+}
+
+@keyframes heroLight {
+    from {
+        transform: translate(0, 0);
+    }
+
+    to {
+        transform: translate(-120px, 100px);
+    }
+}
